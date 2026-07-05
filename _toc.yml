@@ -1,0 +1,14 @@
+# Table of contents
+# https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+  - file: chapters/01_pipeline_overview
+  - file: chapters/02_scrna_qc
+  - file: chapters/03_annotation
+  - file: chapters/04_differential_expression
+  - file: chapters/05_visium
+  - file: chapters/06_xenium_segmentation
+  - file: chapters/07_ecosystem_r_vs_python
+  - file: chapters/08_glossary_resources
