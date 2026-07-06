@@ -22,7 +22,8 @@ The tutorial defaults you see everywhere, meaning `nFeature > 200` and
 skeletal muscle, and metabolically active vascular tissue legitimately carry far
 more mitochondrial content, so a 5 percent cutoff can delete your most interesting
 cells. Set thresholds by looking at the distribution for your own tissue, not by
-inheriting a number.
+inheriting a number. Cai et al documented the range of expected mitochondrial reads here:
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8599307/
 ```
 
 ```{admonition} The mitochondrial cutoff is the one I see people get wrong most
