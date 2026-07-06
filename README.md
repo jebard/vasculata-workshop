@@ -6,7 +6,7 @@ Jonathan E. Bard, PhD
 
 Research Assistant Professor, Department of Biochemistry, Jacobs School of
 Medicine and Biomedical Sciences, University at Buffalo. Associate Director,
-Genomics and Bioinformatics Core. Affiliated with Business and Entrepreneurial
+Genomics and Bioinformatics Core. Center of Excellence in Bioinformatics and Life Sciences, Business and Entrepreneurial
 Partnerships at the University at Buffalo.
 
 This is a read-along guide to the secondary analysis of 10x Genomics single-cell
