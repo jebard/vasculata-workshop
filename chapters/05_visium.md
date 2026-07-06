@@ -27,6 +27,18 @@ sequenced, and how many genes you actually saw. *Real Visium HD data from
 Dr. Remi Adelaiye-Ogala's lab, University at Buffalo.*
 ```
 
+```{figure} ../figures/visium_hd_umi_tissue.png
+:alt: Visium HD prostate section colored by total UMI counts per bin
+:width: 480px
+:align: center
+
+The same idea as a picture: a Visium HD prostate section colored by total UMIs per
+bin. You can read the glandular architecture straight off the raw capture, before
+any clustering or annotation. It doubles as a QC gut-check, because you want signal
+that tracks the tissue, not big dropout holes or a handful of runaway hot spots.
+*Real Visium HD data from Dr. Remi Adelaiye-Ogala's lab, University at Buffalo.*
+```
+
 ## The binning tradeoff (Visium HD)
 
 Visium HD captures on a fine 2 µm grid, but you don't actually analyze it there.
