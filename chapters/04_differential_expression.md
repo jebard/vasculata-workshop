@@ -91,7 +91,7 @@ truly need a per-cell model, a mixed-effects model with a random effect for samp
 such as **NEBULA**, respects the replicate structure too, but honestly pseudobulk
 is simpler, faster, and performs as well or better in most comparisons.
 
-## The part no software can fix
+## Get ahead of the experimental design in the planning phase
 
 ```{admonition} You cannot buy power with more cells
 :class: warning
@@ -105,7 +105,7 @@ for at least three per condition, more if you can afford it. More cells per samp
 is what lets you make a claim about the condition.
 ```
 
-## This applies to spatial too
+## Pseudoreplication applies to spatial too
 
 Two Xenium sections cut from the same block are not independent replicates of the animal, any more than two cells
 are. The biological replicate is still the animal or the donor. Whenever you
