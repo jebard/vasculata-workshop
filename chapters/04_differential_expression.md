@@ -22,6 +22,18 @@ telling the statistics you have thousands of independent samples when you really
 have six. That is pseudoreplication, and it inflates your false-positive rate
 enormously.
 
+```{figure} ../figures/pseudoreplication_schematic.png
+:alt: Schematic contrasting per-cell testing with pseudobulk aggregation
+:width: 100%
+:align: center
+
+The same experiment, counted two ways. On the left every cell is treated as a
+replicate, so the test thinks it has thousands of independent samples and reports a
+tiny p-value it never earned. On the right, each animal's cells are summed into one
+pseudobulk profile, which gives you the honest sample size: six animals, three per
+group. *Schematic with illustrative synthetic data.*
+```
+
 ```{admonition} The analogy I use
 :class: note
 Measuring one person's height ten thousand times does not tell you the average

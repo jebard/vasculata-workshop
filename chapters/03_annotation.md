@@ -53,6 +53,18 @@ obj <- RenameIdents(obj,
 :::
 ::::
 
+```{figure} ../figures/annotation_umap_public.png
+:alt: UMAP of public PBMC data with clusters labeled by cell type
+:width: 90%
+:align: center
+
+What you're working toward: a UMAP where every cluster has a name. This is the
+classic public PBMC dataset, and each of these labels came from reading canonical
+markers off the clusters. It's the same manual logic you'd apply to a vascular
+dataset, just done here on cells everyone already knows. *Public 3k PBMC dataset,
+10x Genomics, annotated following the standard scanpy tutorial.*
+```
+
 ## Tier 2: reference-based, automated
 
 Now you let a computer do the first pass. You transfer labels from a curated atlas
