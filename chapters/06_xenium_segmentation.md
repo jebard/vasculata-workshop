@@ -29,18 +29,19 @@ Dr. Keith Kirkwood's lab, University at Buffalo.*
 | Primary unit | Spot, which is a mixture | Segmented cell |
 | Discovery | Unbiased | Limited to the panel (but the panel can now be large) |
 
-```{figure} ../figures/visium_hd_resolution.png
-:alt: Visium HD UMI-count heatmap resolving fine glandular architecture
-:width: 480px
+```{figure} ../figures/xenium_process_panel.png
+:alt: Three-panel Xenium process: morphology, cell segmentation, and marker gene analysis
+:width: 100%
 :align: center
 
-The resolution contrast, on real tissue. This is a Visium HD prostate section, with
-total UMIs per 8 µm bin, and the glandular architecture is resolved beautifully
-across the whole transcriptome. Now compare it to the Xenium images above: Xenium
-trades that whole-transcriptome breadth for individual molecules at subcellular
-resolution on a defined panel. Different tools, opposite ends of the
-breadth-versus-resolution tradeoff. *Public Visium HD Human Prostate Cancer dataset,
-10x Genomics.*
+The whole Xenium process on a single field of view, here a Low-Fat mouse-tongue
+section. On the left is the high-definition morphology image (multiplexed stains for
+DAPI, ATP1A1/CD45/E-Cadherin, 18S, and alphaSMA/Vimentin). In the middle, that same
+region after cell segmentation, with each cell drawn as a polygon and colored by
+cluster. On the right, marker-gene analysis over those same cells, with transcripts
+colored by gene (Klf4 in magenta, Krt78 in orange, Trp63 in blue). The key thing to
+notice is that everything on the right depends entirely on getting the middle panel
+right. *Real Xenium data from Dr. Keith Kirkwood's lab, University at Buffalo.*
 ```
 
 ```{admonition} The panel is a real constraint
@@ -87,18 +88,6 @@ low-count "cells" that look like a whole new population but aren't. And transcri
 spillover is the third problem, where a molecule from cell A gets assigned to
 neighbor B, smearing your cell-type boundaries and manufacturing co-expression that
 was never real.
-```
-
-```{figure} ../figures/xenium_segmentation.png
-:alt: Segmented Xenium cells colored by cluster, overlaid on tissue
-:width: 520px
-:align: center
-
-The same tissue after segmentation, with each cell now drawn as a polygon and
-colored by its assigned cluster. This is the payoff, but notice how much rides on
-where those polygon boundaries landed. Wherever two colors press right up against
-each other is exactly where spillover and merge errors do their damage.
-*Real Xenium data from Dr. Keith Kirkwood's lab, University at Buffalo.*
 ```
 
 This is where people get misled. Because segmentation errors create co-expression,
