@@ -4,10 +4,7 @@
 
 *Vasculata 2026, Workshop Part 2*
 
-Jonathan E. Bard, PhD. Research Assistant Professor, Department of Biochemistry,
-Jacobs School of Medicine and Biomedical Sciences, University at Buffalo.
-Associate Director, Genomics and Bioinformatics Core. Affiliated with Business and
-Entrepreneurial Partnerships at the University at Buffalo.
+Jonathan E. Bard, PhD ; Donald A. Yergeau, PhD ; Tyler M. Chinsky, MS
 
 Single-cell and spatial technologies have reshaped how we study tissue, and
 nowhere is that clearer than in vascular biology, where the interesting story is
