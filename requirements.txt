@@ -1,2 +1,5 @@
-jupyter-book>=1.0
+# Pinned to Jupyter Book v1 (Sphinx-based, uses _config.yml + _toc.yml).
+# Jupyter Book 2.x is a separate MyST-based rewrite with a different config
+# format and would not build this book.
+jupyter-book>=1.0,<2.0
 sphinx-design>=0.5
