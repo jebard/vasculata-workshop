@@ -39,8 +39,8 @@ total UMIs per 8 µm bin, and the glandular architecture is resolved beautifully
 across the whole transcriptome. Now compare it to the Xenium images above: Xenium
 trades that whole-transcriptome breadth for individual molecules at subcellular
 resolution on a defined panel. Different tools, opposite ends of the
-breadth-versus-resolution tradeoff. *Real Visium HD data from Dr. Remi
-Adelaiye-Ogala's lab, University at Buffalo.*
+breadth-versus-resolution tradeoff. *Public Visium HD Human Prostate Cancer dataset,
+10x Genomics.*
 ```
 
 ```{admonition} The panel is a real constraint
