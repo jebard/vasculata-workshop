@@ -1,8 +1,8 @@
 # 6. Xenium: Single Molecules, and Why Segmentation Is Everything
 
 Xenium flips the Visium trade completely on its head. Instead of the whole
-transcriptome at multi-cell resolution, you get a targeted gene panel imaged at
-subcellular resolution. You literally see individual transcript molecules sitting at
+transcriptome at multi-cell resolution, you get a targeted gene panel, now anywhere
+from a few hundred genes up to around 5,000, imaged at subcellular resolution. You literally see individual transcript molecules sitting at
 their own x and y coordinates. Here's the catch. Those molecules show up as a point
 cloud, and something has to decide which cell each one belongs to. That decision is
 called segmentation, and it is the whole ballgame.
@@ -15,8 +15,8 @@ called segmentation, and it is the whole ballgame.
 A raw Xenium image, before any of the analysis in this chapter. The colors are
 multiplexed stains (DAPI, ATP1A1/CD45/E-Cadherin, 18S, alphaSMA/Vimentin), and the
 epithelial architecture is beautifully preserved. Every downstream number depends
-on how well we can turn this picture into individual cells. *Representative Xenium
-imaging, courtesy of Dr. Keith Kirkwood, University at Buffalo.*
+on how well we can turn this picture into individual cells. *Real Xenium data from
+Dr. Keith Kirkwood's lab, University at Buffalo.*
 ```
 
 ## How Xenium differs from Visium
@@ -24,17 +24,34 @@ imaging, courtesy of Dr. Keith Kirkwood, University at Buffalo.*
 | | Visium | Xenium |
 |---|---|---|
 | Readout | Sequencing | Imaging (fluorescence) |
-| Genes | Whole transcriptome | Targeted panel, roughly 280 to 480, with custom add-ons |
+| Genes | Whole transcriptome | Targeted panel: a few hundred on the standard assays, up to about 5,000 with Xenium Prime 5K, plus custom add-ons |
 | Resolution | Spot or bin | Individual transcripts, subcellular |
 | Primary unit | Spot, which is a mixture | Segmented cell |
-| Discovery | Unbiased | Limited to the panel |
+| Discovery | Unbiased | Limited to the panel (but the panel can now be large) |
+
+```{figure} ../figures/visium_hd_resolution.png
+:alt: Visium HD UMI-count heatmap resolving fine glandular architecture
+:width: 480px
+:align: center
+
+The resolution contrast, on real tissue. This is a Visium HD prostate section, with
+total UMIs per 8 µm bin, and the glandular architecture is resolved beautifully
+across the whole transcriptome. Now compare it to the Xenium images above: Xenium
+trades that whole-transcriptome breadth for individual molecules at subcellular
+resolution on a defined panel. Different tools, opposite ends of the
+breadth-versus-resolution tradeoff. *Real Visium HD data from Dr. Remi
+Adelaiye-Ogala's lab, University at Buffalo.*
+```
 
 ```{admonition} The panel is a real constraint
 :class: warning
-Xenium only measures the genes you picked ahead of time. So if your key marker, or
-your exciting surprise result, involves a gene that isn't on the panel, it simply
-does not exist in your data. Design the panel like you mean it, and don't walk in
-expecting unbiased discovery, because you won't get it.
+Xenium only measures the genes you chose ahead of time. Those panels have grown a
+lot, from a few hundred genes on the standard assays to around 5,000 with the
+Xenium Prime 5K, and you can add custom genes on top. That is a huge menu, but it is
+still a menu. If your key marker, or your exciting surprise result, involves a gene
+that isn't on the panel, it simply does not exist in your data. Even at 5,000 genes
+you are choosing a targeted list, not capturing the whole transcriptome, so design
+the panel like you mean it.
 ```
 
 ## The segmentation problem
@@ -55,8 +72,8 @@ actually measured instead of assumed. It's much better, if you ran it.
 This is what the pipeline actually starts from: individual transcript molecules,
 each a dot at its own coordinate. There are no cells here yet. Segmentation is the
 step that decides which dots belong together, and you can already see how a molecule
-sitting between two cells could go either way. *Representative Xenium imaging,
-courtesy of Dr. Keith Kirkwood, University at Buffalo.*
+sitting between two cells could go either way. *Real Xenium data from Dr. Keith
+Kirkwood's lab, University at Buffalo.*
 ```
 
 Two failure modes are worth naming out loud, because you will meet both.
@@ -81,8 +98,7 @@ The same tissue after segmentation, with each cell now drawn as a polygon and
 colored by its assigned cluster. This is the payoff, but notice how much rides on
 where those polygon boundaries landed. Wherever two colors press right up against
 each other is exactly where spillover and merge errors do their damage.
-*Representative Xenium segmentation, courtesy of Dr. Keith Kirkwood, University at
-Buffalo.*
+*Real Xenium data from Dr. Keith Kirkwood's lab, University at Buffalo.*
 ```
 
 This is where people get misled. Because segmentation errors create co-expression,

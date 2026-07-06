@@ -8,10 +8,10 @@ and Bioinformatics Core, University at Buffalo.*
 | | Visium | Xenium |
 |---|---|---|
 | Readout | Sequencing | Imaging (fluorescence) |
-| Genes measured | Whole transcriptome | Targeted panel, roughly 280 to 480, plus add-ons |
+| Genes measured | Whole transcriptome | Targeted panel: few hundred up to ~5,000 (Xenium Prime 5K), plus add-ons |
 | Resolution | 55 µm spot (v1 and v2), or 2 µm bins (HD) | Individual transcripts, subcellular |
 | Primary unit | Spot or bin, which is a mixture of cells | Segmented single cell |
-| Discovery | Unbiased, any gene | Limited to panel genes |
+| Discovery | Unbiased, any gene | Limited to panel genes (even at ~5,000, still a fixed list) |
 | Main analytical headache | Deconvolution | Segmentation |
 
 Rule of thumb. Use Visium when you do not yet know which genes matter, meaning
