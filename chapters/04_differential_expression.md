@@ -11,8 +11,7 @@ nobody warns you about it. It is called pseudoreplication.
 Here is the trap. You have three diseased animals and three healthy ones. Each
 animal gives you a few thousand cells. You pick your endothelial cluster, run a
 differential-expression test across condition, and the tool happily reports
-hundreds of genes with p-values so small they look like typos. You feel great. You
-should not.
+hundreds of genes with p-values so small they look like typos.
 
 The problem is that you did not have thousands of independent measurements. You had
 six animals. Every cell from a given animal shares that animal's genetics, its
@@ -20,7 +19,7 @@ batch, its capture, its whole biological context, so those cells are not
 independent of each other. When you treat each cell as its own replicate, you are
 telling the statistics you have thousands of independent samples when you really
 have six. That is pseudoreplication, and it inflates your false-positive rate
-enormously.
+enormously. This is well described by Zimmerman et al. https://www.nature.com/articles/s41467-021-21038-1
 
 ```{figure} ../figures/pseudoreplication_schematic.png
 :alt: Schematic contrasting per-cell testing with pseudobulk aggregation
@@ -44,10 +43,6 @@ about the individuals you happened to sample, not about the conditions you care
 about. Worse, a single unusual animal can drive the entire result, and the per-cell
 test will never tell you.
 ```
-
-This is not a hypothetical concern. When people have gone back and checked, the
-naive per-cell methods produce long lists of "significant" genes that do not
-reproduce, and the apparent signal often traces back to one or two samples.
 
 ## The fix: pseudobulk
 
@@ -100,22 +95,19 @@ is simpler, faster, and performs as well or better in most comparisons.
 
 ```{admonition} You cannot buy power with more cells
 :class: warning
-This is the uncomfortable part. Pseudobulk protects you from false positives, but
-it cannot manufacture statistical power you never had. If you profiled one diseased
-mouse and one healthy mouse, you have an n of one per group, and no amount of
+Pseudobulk protects you from false positives, but it cannot manufacture statistical power you never had.
+If you profiled one diseased mouse and one healthy mouse, you have an n of one per group, and no amount of
 sequencing depth or clever modeling changes that. Sequencing more cells per animal
 makes each animal's profile more precise. It does not give you more animals.
 
-So the real fix happens before you ever touch a keyboard. Design the experiment
-with genuine biological replicates, meaning independent animals or donors, and aim
-for at least three per condition, more if you can afford it. More cells per sample
-is nice. More samples is what lets you make a claim about the condition.
+Design the experiment with genuine biological replicates, meaning independent animals or donors, and aim
+for at least three per condition, more if you can afford it. More cells per sample is nice. More samples
+is what lets you make a claim about the condition.
 ```
 
 ## This applies to spatial too
 
-Do not think this is only a single-cell problem. Two Xenium sections cut from the
-same block are not independent replicates of the animal, any more than two cells
+Two Xenium sections cut from the same block are not independent replicates of the animal, any more than two cells
 are. The biological replicate is still the animal or the donor. Whenever you
 compare conditions in Visium or Xenium, aggregate to the sample level and count
 your replicates honestly, exactly as you would here.
