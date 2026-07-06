@@ -81,7 +81,7 @@ reference may know nothing about your rare or perturbed states.
 | 10X Celltype Annotations | cellranger | Integrated into the 10X ecosystem and requires no extra work |
 
 ```{admonition} The 10X warning
-class: warning
+:class: warning
 The 10x Genomics' own automated cell type annotation, now built directly into 
 the Cell Ranger family of pipelines, available in Cell Ranger, Cell Ranger ARC, and 
 Space Ranger. You can choose a cloud based model co-developed with the Broad Institute, 
