@@ -63,5 +63,7 @@ weird, the answer is sometimes sitting upstream of where you're staring. Verify 
 ```{tip}
 When a collaborator hands you "the data," I'd ask three questions before anything
 else. What version of the vendor pipeline made this? What reference genome
-or transcriptome did it use? And is this the filtered matrix or the raw one? Cellranger prior to version 3 had major differences in cell-calling algorithms, so any older data should likely be reprocessed.
+or transcriptome did it use? And is this the filtered matrix or the raw one?
+Cellranger prior to version 3 had major differences in cell-calling algorithms,
+ so any older data should likely be reprocessed.
 ```
