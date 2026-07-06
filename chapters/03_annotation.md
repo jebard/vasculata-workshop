@@ -78,6 +78,21 @@ reference may know nothing about your rare or perturbed states.
 | SingleR | R | Correlation to reference bulk or single-cell profiles, no training needed |
 | CellTypist | Python | Logistic-regression models, and the immune atlas is excellent |
 | scANVI, scArches | Python | Deep models that map onto a reference and integrate at the same time |
+| 10X Celltype Annotations | cellranger | Integrated into the 10X ecosystem and requires no extra work |
+
+```{admonition} The 10X warning
+class: warning
+The 10x Genomics' own automated cell type annotation, now built directly into 
+the Cell Ranger family of pipelines, available in Cell Ranger, Cell Ranger ARC, and 
+Space Ranger. You can choose a cloud based model co-developed with the Broad Institute, 
+or the Satija lab's Pan-Human Azimuth model, which runs locally, avoiding the cloud route 
+where your data would leave your institution under 10x's terms of use. The convenience is 
+real: labels appear automatically as part of routine processing, no extra 
+code required. That's also the risk. A label bundled with your standard output feels more 
+authoritative than it is. The cloud model is still in beta, and like any reference based 
+method, it will confidently label cells that don't really match anything it's seen. 
+Treat it as a starting point, not a verdict.
+```
 
 ## Tier 3: foundation models and LLMs (the recent advance)
 
@@ -93,17 +108,6 @@ millions of cells, like scGPT, Geneformer, and scFoundation. They produce
 embeddings and annotations and can be fine-tuned to your data. They're powerful and
 getting better fast, but they're heavier to run and still being validated against
 plain manual labels.
-
-The third is 10x Genomics' own automated cell type annotation, now built directly into 
-the Cell Ranger family of pipelines, available in Cell Ranger, Cell Ranger ARC, and 
-Space Ranger. You can choose a cloud based model co-developed with the Broad Institute, 
-or the Satija lab's Pan-Human Azimuth model, which runs locally, avoiding the cloud route 
-where your data would leave your institution under 10x's terms of use. The convenience is 
-real: labels appear automatically as part of routine processing, no extra 
-code required. That's also the risk. A label bundled with your standard output feels more 
-authoritative than it is. The cloud model is still in beta, and like any reference based 
-method, it will confidently label cells that don't really match anything it's seen. 
-Treat it as a starting point, not a verdict.
 
 ```{admonition} The honest take
 :class: warning
