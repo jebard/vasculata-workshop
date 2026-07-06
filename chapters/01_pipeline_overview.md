@@ -51,22 +51,17 @@ Spatial data runs that exact same backbone and then adds a spatial layer on top,
 meaning neighborhood analysis, spatial domains, and cell-to-cell communication
 (Chapters 5 and 6).
 
-## Why this map matters for you
-
-Two things fall out of this immediately, and both of them will save you.
-
+## A few things to keep in mind across all omics-datasets.
 First, garbage upstream is invisible downstream. A UMAP will always hand you pretty
-clusters, even from an experiment that completely failed. I cannot stress this
-enough. The QC step in Chapter 2 is your only real checkpoint, and it happens
-before anything on your screen looks like biology.
+clusters, even from an experiment that completely failed. The QC step in Chapter 2 is your only real checkpoint, and it happens
+before anything on your screen looks like biology. The article titled "The specious art of single-cell genomics" is an interesting read, https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/ though we still find dimension reduction and visualization useful despite the criticism.
 
 Second, the count matrix is not raw truth. It's already the product of alignment
 choices and cell-calling thresholds somebody else set. So when a result looks
-weird, the answer is sometimes sitting upstream of where you're staring.
+weird, the answer is sometimes sitting upstream of where you're staring. Verify alignment rates look good, verify the correct genomes were used, and verify and artifical constructs are included in the reference-- did a collaborator add a GFP construct they are looking to analyze?
 
 ```{tip}
 When a collaborator hands you "the data," I'd ask three questions before anything
 else. What version of the vendor pipeline made this? What reference genome
-or transcriptome did it use? And is this the filtered matrix or the raw one? The
-answers genuinely change what you should do next.
+or transcriptome did it use? And is this the filtered matrix or the raw one? Cellranger prior to version 3 had major differences in cell-calling algorithms, so any older data should likely be reprocessed.
 ```
