@@ -1,7 +1,5 @@
-# 2. Quality Control: Where Datasets Live or Die
-
-If you remember one thing from this workshop, make it this. Clustering never
-fails. Hand any matrix to any tool and you will get clean-looking clusters and a
+# 2. Quality Control: Where Analysis May End
+Clustering never fails. Hand any matrix to tSNE or UMAP and you will likely get clean-looking clusters and a
 UMAP you could put on a poster, even if the experiment was a technical disaster.
 QC is the one place where the data can tell you it is bad, and it does so before
 anything looks like biology.
