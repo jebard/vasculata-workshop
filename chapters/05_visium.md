@@ -74,6 +74,21 @@ using 10x's own cell-segmentation output or a tool like Bin2cell, to recover
 something close to single cells. And the moment you do that, you've inherited the
 Xenium segmentation problem from Chapter 6.
 
+```{figure} ../figures/spatial_resolution_units.png
+:alt: To-scale comparison of a Visium spot, Visium HD bins, and Xenium cell segmentation over the same tissue
+:width: 100%
+:align: center
+
+The same patch of tissue measured four ways, drawn to scale. A single Visium spot
+(55 µm) swallows dozens of cells at once. Visium HD lays down a grid instead, finer
+as you go from 16 µm to 8 µm bins (and down to a 2 µm native grid), but notice that
+the grid lines cut straight through cells with no regard for where the boundaries
+actually are. Xenium instead segments each cell, so the unit follows the biology,
+and you can even see the individual transcripts inside. That is the binning versus
+segmentation distinction in one picture. *Schematic, to scale; default unit sizes
+per 10x Genomics.*
+```
+
 ## The consequence: a spot is a mixture
 
 This is the subtle part. Because a classic Visium spot holds several cells, its
