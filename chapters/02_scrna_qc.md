@@ -22,8 +22,7 @@ The tutorial defaults you see everywhere, meaning `nFeature > 200` and
 skeletal muscle, and metabolically active vascular tissue legitimately carry far
 more mitochondrial content, so a 5 percent cutoff can delete your most interesting
 cells. Set thresholds by looking at the distribution for your own tissue, not by
-inheriting a number. Cai et al documented the range of expected mitochondrial reads here
-https://pmc.ncbi.nlm.nih.gov/articles/PMC8599307/
+inheriting a number.
 ```
 
 ```{admonition} The mitochondrial cutoff is the one I see people get wrong most
@@ -55,6 +54,9 @@ So do not hard-code 5 percent. Two better habits:
 
 One more note. In single-nucleus RNA-seq the expectation flips: you want very
 little mitochondrial signal, so a high value there really is a red flag.
+
+Cai et al documented the range of expected mitochondrial reads here
+https://pmc.ncbi.nlm.nih.gov/articles/PMC8599307/
 ```
 
 ## Reading the plots, not the numbers
