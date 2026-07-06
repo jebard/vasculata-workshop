@@ -8,7 +8,7 @@ Tyler M. Chinsky, MS
 
 Genomics and Bioinformatics Core. 
 Center of Excellence in Bioinformatics and Life Sciences
-Business and Entrepreneurial Partnerships
+Business and Entrepreneur Partnerships
 State University of New York at Buffalo.
 
 This is a read-along guide to the secondary analysis of 10x Genomics single-cell
@@ -61,5 +61,4 @@ decision guide.
 ## Acknowledgments
 
 Prepared for Vasculata 2026, hosted by the North American Vascular Biology
-Organization. With thanks to the Department of Biochemistry and the Genomics and Bioinformatics Core Faciltiy at the Center of Excellence in Bioinformatics and Life Sicences,  Business and
-Entrepreneurial Partnerships at the University at Buffalo. Claude AI model Opus 4.8 was used to scaffold, the code, initial writing, and github deployment. All sections reviewed by Bard and Chinsky for accuracy.
+Organization. With thanks to the Department of Biochemistry and the Genomics and Bioinformatics Core Faciltiy at the Center of Excellence in Bioinformatics and Life Sicences,  Business and Entrepreneur Partnerships at the University at Buffalo. Claude AI model Opus 4.8 was used to scaffold, the code, initial writing, and github deployment. All sections reviewed by Bard and Chinsky for accuracy.
