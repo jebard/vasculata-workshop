@@ -23,8 +23,8 @@ came from. That's the whole trick.
 
 The kind of top-line numbers you get from a Visium HD run. These are your first QC
 gut-check, meaning how many bins fell under tissue, how deeply each one was
-sequenced, and how many genes you actually saw. *Visium HD prostate dataset, UB
-Genomics and Bioinformatics Core.*
+sequenced, and how many genes you actually saw. *Representative Visium HD run,
+courtesy of Dr. Remi Adelaiye-Ogala, University at Buffalo.*
 ```
 
 ## The binning tradeoff (Visium HD)
@@ -51,8 +51,8 @@ spatial data to see in the first place.
 The tradeoff in plain numbers, from one real dataset. Going from 8 µm to 16 µm bins
 drops you from 552,642 bins to 139,446, but the mean UMIs per bin jumps from about
 67 to 268. That's the whole story: coarser bins are far less sparse, but there are
-far fewer of them and each one blends more cells together. *Visium HD prostate
-dataset, UB Genomics and Bioinformatics Core.*
+far fewer of them and each one blends more cells together. *Representative Visium
+HD run, courtesy of Dr. Remi Adelaiye-Ogala, University at Buffalo.*
 ```
 
 So there's no universally correct bin size. I go fine when I need to resolve

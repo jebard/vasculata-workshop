@@ -53,18 +53,6 @@ obj <- RenameIdents(obj,
 :::
 ::::
 
-```{figure} ../figures/annotation_umap.png
-:alt: UMAP with clusters labeled by cell type
-:width: 90%
-:align: center
-
-What you're working toward: a UMAP where every cluster has been given a name. Each
-one of these labels came from reading marker genes off a dot plot, cluster by
-cluster. The immune compartment alone (T cells, macrophages, dendritic cells,
-neutrophils, and more) shows why this takes real biological judgment. *Xenium
-mouse-tongue dataset, UB Genomics and Bioinformatics Core.*
-```
-
 ## Tier 2: reference-based, automated
 
 Now you let a computer do the first pass. You transfer labels from a curated atlas
@@ -78,18 +66,6 @@ reference may know nothing about your rare or perturbed states.
 | SingleR | R | Correlation to reference bulk or single-cell profiles, no training needed |
 | CellTypist | Python | Logistic-regression models, and the immune atlas is excellent |
 | scANVI, scArches | Python | Deep models that map onto a reference and integrate at the same time |
-
-```{figure} ../figures/reference_atlas_umap.png
-:alt: Annotated reference dataset UMAP used for label transfer
-:width: 100%
-:align: center
-
-A curated reference atlas, already labeled, of the sort these methods transfer from.
-The automated tools line your cells up against a map like this one and hand each
-cell the nearest label. It's fast and consistent, but anything your reference has
-never seen is going to get the closest wrong answer instead. *Reference atlas, UB
-Genomics and Bioinformatics Core.*
-```
 
 ## Tier 3: foundation models and LLMs (the recent advance)
 

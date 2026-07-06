@@ -15,8 +15,8 @@ called segmentation, and it is the whole ballgame.
 A raw Xenium image, before any of the analysis in this chapter. The colors are
 multiplexed stains (DAPI, ATP1A1/CD45/E-Cadherin, 18S, alphaSMA/Vimentin), and the
 epithelial architecture is beautifully preserved. Every downstream number depends
-on how well we can turn this picture into individual cells. *Xenium mouse-tongue
-dataset, UB Genomics and Bioinformatics Core.*
+on how well we can turn this picture into individual cells. *Representative Xenium
+imaging, courtesy of Dr. Keith Kirkwood, University at Buffalo.*
 ```
 
 ## How Xenium differs from Visium
@@ -55,8 +55,8 @@ actually measured instead of assumed. It's much better, if you ran it.
 This is what the pipeline actually starts from: individual transcript molecules,
 each a dot at its own coordinate. There are no cells here yet. Segmentation is the
 step that decides which dots belong together, and you can already see how a molecule
-sitting between two cells could go either way. *Xenium mouse-tongue dataset, UB
-Genomics and Bioinformatics Core.*
+sitting between two cells could go either way. *Representative Xenium imaging,
+courtesy of Dr. Keith Kirkwood, University at Buffalo.*
 ```
 
 Two failure modes are worth naming out loud, because you will meet both.
@@ -80,8 +80,9 @@ was never real.
 The same tissue after segmentation, with each cell now drawn as a polygon and
 colored by its assigned cluster. This is the payoff, but notice how much rides on
 where those polygon boundaries landed. Wherever two colors press right up against
-each other is exactly where spillover and merge errors do their damage. *Xenium
-mouse-tongue dataset, UB Genomics and Bioinformatics Core.*
+each other is exactly where spillover and merge errors do their damage.
+*Representative Xenium segmentation, courtesy of Dr. Keith Kirkwood, University at
+Buffalo.*
 ```
 
 This is where people get misled. Because segmentation errors create co-expression,
