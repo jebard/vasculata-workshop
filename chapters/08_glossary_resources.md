@@ -77,6 +77,7 @@ rather than global geometry.
 
 - Azimuth: https://azimuth.hubmapconsortium.org
 - CellTypist: https://www.celltypist.org
+- 10X Annotations: https://www.10xgenomics.com/support/software/cell-ranger/latest/algorithms-overview/cr-cell-annotation-algorithm
 
 ### Differential expression (pseudobulk)
 
