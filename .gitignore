@@ -10,5 +10,8 @@ __pycache__/
 # OS / editor
 .DS_Store
 
+# Source presentation decks (figures are extracted into figures/ instead)
+pptx/
+
 # Local Claude settings (personal, not for the shared repo)
 .claude/settings.local.json

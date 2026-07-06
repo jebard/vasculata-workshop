@@ -16,6 +16,17 @@ came from. That's the whole trick.
 | Visium (v1 and v2) | 55 µm spot | About 1 to 10, depending on tissue | Whole |
 | Visium HD | 2 µm bins, binnable to 8 and 16 µm | Sub-cellular up to a few | Whole |
 
+```{figure} ../figures/visium_key_metrics.png
+:alt: Visium HD run summary metrics
+:width: 480px
+:align: center
+
+The kind of top-line numbers you get from a Visium HD run. These are your first QC
+gut-check, meaning how many bins fell under tissue, how deeply each one was
+sequenced, and how many genes you actually saw. *Visium HD prostate dataset, UB
+Genomics and Bioinformatics Core.*
+```
+
 ## The binning tradeoff (Visium HD)
 
 Visium HD captures on a fine 2 µm grid, but you don't actually analyze it there.
@@ -30,6 +41,18 @@ where your cell boundaries are. Large bins, around 16 µm, are smoother and pack
 more counts, which makes clustering easier, but now each bin blends several cells
 together, and that smears out exactly the cell-to-cell distinctions you bought
 spatial data to see in the first place.
+```
+
+```{figure} ../figures/visium_bin_metrics.png
+:alt: Visium HD bin metrics comparing 8 micron and 16 micron bins
+:width: 650px
+:align: center
+
+The tradeoff in plain numbers, from one real dataset. Going from 8 µm to 16 µm bins
+drops you from 552,642 bins to 139,446, but the mean UMIs per bin jumps from about
+67 to 268. That's the whole story: coarser bins are far less sparse, but there are
+far fewer of them and each one blends more cells together. *Visium HD prostate
+dataset, UB Genomics and Bioinformatics Core.*
 ```
 
 So there's no universally correct bin size. I go fine when I need to resolve

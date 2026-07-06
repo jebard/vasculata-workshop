@@ -22,6 +22,18 @@ telling the statistics you have thousands of independent samples when you really
 have six. That is pseudoreplication, and it inflates your false-positive rate
 enormously.
 
+```{figure} ../figures/cluster_proportion_by_condition.png
+:alt: Cell-type cluster proportions compared across two conditions
+:width: 90%
+:align: center
+
+A comparison across two conditions, here cell-type proportions shifting between two
+diets. It's exactly the kind of result we get excited about, and it's exactly the
+kind that pseudoreplication can fake. Every bar is only as trustworthy as the number
+of animals behind it, not the number of cells. *Xenium mouse-tongue dataset, UB
+Genomics and Bioinformatics Core.*
+```
+
 ```{admonition} The analogy I use
 :class: note
 Measuring one person's height ten thousand times does not tell you the average
