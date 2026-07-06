@@ -40,8 +40,6 @@ what these plots look like on data that has not been sanded down for a tutorial.
 
 ## A note on scope
 
-Thirty minutes is not enough time to make anyone a bioinformatician, and I am not
-going to pretend otherwise. My goal is narrower and, I think, more useful. I want
-to make you a better-informed collaborator and data consumer, someone who knows
+Thirty minutes to an hour is not enough time to make anyone a bioinformatician, but I hope this guide contains useful tips and tricks that aren't covered by standard tutorials. The goal for this workshop is to be a better-informed collaborator and data consumer, someone who knows
 which questions to ask, which plots to demand, and where the analysis can quietly
 go wrong before anyone notices.
