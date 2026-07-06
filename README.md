@@ -2,8 +2,8 @@
 
 **Vasculata 2026, Workshop Part 2**
 
-Jonathan E. Bard, PhD
-Donald A. Yergeau, PhD
+Jonathan E. Bard, PhD ;
+Donald A. Yergeau, PhD ;
 Tyler M. Chinsky, MS 
 
 Genomics and Bioinformatics Core. 
